@@ -16,7 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://127.0.0.1/amazona');
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://admin:root@db01:27017/database?authSource=admin&directConnection=true');
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
