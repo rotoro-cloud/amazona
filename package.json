@@ -5,8 +5,7 @@
   "description": "Ecommerce website like amazon",
   "main": "index.js",
   "scripts": {
-  "build": "cd frontend && npm install && npm run build",
-    "build": "cd frontend && npm install && npm run build",
+    "build": "cd frontend && npm install &&  NODE_OPTIONS=--openssl-legacy-provider npm run build",
     "start:prod": "NODE_ENV=prod node backend/server.js",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
